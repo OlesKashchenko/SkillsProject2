@@ -1,0 +1,3 @@
+[submodule "workbench/oles-kashchenko/lar-oauth"]
+	path = workbench/oles-kashchenko/lar-oauth
+	url = git://github.com/OlesKashchenko/LarOAuth

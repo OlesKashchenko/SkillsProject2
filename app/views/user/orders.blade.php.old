@@ -1,0 +1,53 @@
+@if ($results)
+    <table style="width: 100%;" class="table">
+        <tr>
+            <td style="padding: 10px;text-align: center;">Идентификатор</td>
+            <td style="padding: 10px;text-align: center;">Информация</td>
+            <td style="padding: 10px;text-align: center;">Дата просмотра</td>
+        </tr>
+        @foreach ($results as $result)
+            <tr>
+                <td style="padding: 10px;text-align: center;">{{ $result['identifier'] }}</td>
+                <td style="padding: 10px;">
+                    <table>
+                        @if (isset($result['log']['status']) && $result['log']['status'])
+                        <tr>
+                            <td style="padding: 10px;width: 200px;">Состояние заказа:</td>
+                            <td style="padding: 10px;">{{ $result['log']['status'] }}</td>
+                        </tr>
+                        @endif
+                        @if (isset($result['log']['route']) && $result['log']['route'])
+                        <tr>
+                            <td style="padding: 10px;">Маршрут:</td>
+                            <td style="padding: 10px;">{{ $result['log']['route'] }}</td>
+                        </tr>
+                        @endif
+                        @if (isset($result['log']['phone_receiver']) && $result['log']['phone_receiver'])
+                        <tr>
+                            <td style="padding: 10px;">Контакты получателя:</td>
+                            <td style="padding: 10px;">{{ $result['log']['phone_receiver'] }}</td>
+                        </tr>
+                        @endif
+                        @if (isset($result['log']['address']) && $result['log']['address'])
+                        <tr>
+                            <td style="padding: 10px;">Адрес получателя:</td>
+                            <td style="padding: 10px;">{{ $result['log']['address'] }}</td>
+                        <tr>
+                        @endif
+                        @if (isset($result['log']['date_arrival']) && $result['log']['date_arrival'])
+                        <tr>
+                            <td style="padding: 10px;">Дата прибытия:</td>
+                            <td style="padding: 10px;">{{ $result['log']['date_arrival'] }}</td>
+                        </tr>
+                        @endif
+                    </table>
+                </td>
+                <td style="padding: 10px;text-align: center;">{{ date('d/m/Y', strtotime($result['created_at'])) }}</td>
+            </tr>
+        @endforeach
+    </table>
+@else
+    <div id="results-header" style="margin: 10px auto;width: 750px;">
+        <h4>У Вас еще нет ни одной просмотренной перевозки.</h4>
+    </div>
+@endif

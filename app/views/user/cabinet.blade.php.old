@@ -1,0 +1,38 @@
+@extends('layouts.default')
+
+@section('title')
+    articles
+@stop
+
+@section('content')
+    <div class="content">
+        <div class="container" style="margin-top: 60px;">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#profile" role="tab" data-toggle="tab">Данные профиля</a></li>
+                        <li><a href="#orders" role="tab" data-toggle="tab">Просмотренные перевозки</a></li>
+                        <li><a href="#bonuses" role="tab" data-toggle="tab">Бонусы</a></li>
+                    </ul>
+                    <div class="tab-content" style="margin-top: 10px;">
+                        <div class="tab-pane active" id="profile">
+                            <h2>Данные профиля</h2>
+                            <div>
+                                @include('user.profile')
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="orders">
+                            <h2>Просмотренные перевозки</h2>
+                            <div>
+                                @include('user.orders')
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="bonuses">Здесь будут бонусы</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+@stop

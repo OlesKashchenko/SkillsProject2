@@ -1,0 +1,82 @@
+<div>
+    <form id="cabinet_form" autocomplete="off">
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Ваше имя</span>
+                            <input type="text" class="form-control" placeholder="Ваше имя" name="first_name" value="{{ $user->first_name }}">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Ваша фамилия</span>
+                            <input type="text" class="form-control" placeholder="Ваша фамилия" name="last_name" value="{{ $user->last_name }}">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Электронный адрес</span>
+                            <input type="text" class="form-control" placeholder="Электронный адрес" name="email" value="{{ $user->email }}">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Номер телефона</span>
+                            <input type="text" class="form-control" placeholder="Ваша фамилия" name="phones" value="{{ $user->phones }}">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td colspan="2" style="padding: 10px;"><h2><i>Изменение пароля</i></h2></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Старый пароль</span>
+                            <input type="password" class="form-control" placeholder="Старый пароль" name="old_pass">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Новый пароль</span>
+                            <input type="password" class="form-control" placeholder="Новый пароль" name="new_pass">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <div class="input-group" style="width: 100%;">
+                            <span class="input-group-addon" style="width: 160px;">Повторите пароль</span>
+                            <input type="password" class="form-control" placeholder="Повторите пароль" name="new_pass_confirmation">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td colspan="2" style="padding: 10px;float: right;">
+                        <input onclick="jQuery('#cabinet_form').submit();" type="button" class="btn btn-default" value="Сохранить изменения">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

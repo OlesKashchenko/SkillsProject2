@@ -1,0 +1,54 @@
+.submenu {
+    top:35px;
+}
+.other_submenu .submenu {
+    top:32px;
+}
+.menu_item.open .item_main:before {
+    left: -12px;
+}
+.menu_item .dropdown-menu {
+    top:25px;
+}
+.menu_item.open .item_main {
+    padding-bottom: 5px;
+}
+.tovar_data .two_row_menu .menu_link.act:after {
+    right: -10px;
+}
+
+@media screen and (max-width: 1090px) {
+    .menu_link.act {
+        padding-bottom: 6px;
+    }
+    .submenu {
+        top:34px;
+    }
+    .menu_item.open .item_main:before {
+        left: -11px;
+    }
+    .menu_box.act:before, .menu_box.act:after {
+        bottom: -2px;
+    }
+    .dropdown.avto.open_car .dropdown-menu.mycar {
+        top:17px;
+    }
+    .tovar_data .two_menu_box .menu_link:before, .tovar_data .two_menu_box .menu_link:after {
+        bottom: -1px;
+    }
+    .menu_item.open .item_main:before {
+        left: -11px;
+    }
+    .action_social .left, .action_social .right {
+        float: none;
+    }
+    .action_social .right {
+        padding-top: 15px;
+    }
+    .search input[type='button'] {
+        top:5px;
+    }
+    .reception_dropdown .dropdown-menu {
+        top:39px;
+    }
+}
